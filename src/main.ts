@@ -13,11 +13,11 @@ import { Amplify } from 'aws-amplify';
 Amplify.configure({
   Auth: {
     Cognito: {
-      userPoolId:       'us-east-1_XXXXXXXXX',
-      userPoolClientId: 'XXXXXXXXXXXXXXXXXXXXXXXXXX',
+      userPoolId:       'us-east-1_rPQIIZtZj',
+      userPoolClientId: '4f1rm6oiup6sfepbsmu56j6nem',
       loginWith: {
         oauth: {
-          domain:          'biblioteca-XXX-0000.auth.us-east-1.amazoncognito.com',
+          domain:          'bibloteca-vf-0310.auth.us-east-1.amazoncognito.com',
           scopes:          ['openid', 'profile', 'biblioteca/libros.leer'],
           redirectSignIn:  ['http://localhost:4200/callback'],
           redirectSignOut: ['http://localhost:4200'],
