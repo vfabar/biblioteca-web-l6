@@ -53,4 +53,13 @@ export class App {
         error: (e) => { console.error('el panel fallo:', e.status, e.error); this.cargando.set(false); },
       });
   }
+
+  pedirPrestamo(libroId: number): void {
+    this.http
+      .post('http://localhost:8080/v1/panel/prestamos', { libroId })
+      .subscribe({
+        next: () => this.cargarPanel(),
+        error: (e) => console.error('el prestamo fallo:', e.status, e.error),
+      });
+  }
 }
